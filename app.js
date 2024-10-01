@@ -17,8 +17,8 @@ app.get('/', (req, res) => {
 });
 
 // Use authentication routes
-app.use('/api/user', authRoutes);
-app.use('/api/auth', userRoute);
+app.use('/api/auth', authRoutes);
+app.use('/api/user', userRoute);
 
 // Start server
 const PORT = 6000;
