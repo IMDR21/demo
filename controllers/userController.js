@@ -15,7 +15,7 @@ const getUserById = async (req, res) => {
     const { id } = req.params;
 
     try {
-        const [rows] = await pool.query('SELECT id, lastname, firstname, username, gender, created_at, updated_at FROM users WHERE id = ?', [id]); // Include gender
+        const [rows] = await pool.query('SELECT id, lastname, firstname, username, gender, created_at, updated_at FROM users WHERE id = ?', [id]); 
 
         if (rows.length === 0) {
             return res.status(404).json({ error: 'User not found' });
